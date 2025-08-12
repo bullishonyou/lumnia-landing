@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, PhoneCall, Bot, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { TrendingDown, Zap, TrendingUp } from "lucide-react";
+
 
 const variantsFadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -54,15 +56,6 @@ const Card = ({ children, className = "" }) => (
   </div>
 );
 
-function useMailto() {
-  return React.useCallback((data) => {
-    const subject = encodeURIComponent("Richiesta demo — Lumnia");
-    const body = encodeURIComponent(
-      `Nome: ${data.nome}\nEmail: ${data.email}\nAzienda: ${data.azienda}\nMessaggio: ${data.messaggio}`
-    );
-    window.location.href = `mailto:hello@lumnia.ai?subject=${subject}&body=${body}`;
-  }, []);
-}
 
 export default function LumniaLanding() {
   return (
@@ -92,6 +85,7 @@ export default function LumniaLanding() {
               </span>
             </a>
             <nav className="hidden md:flex items-center gap-7 text-sm">
+              <a href="#visione" className="text-slate-700 hover:text-slate-900">Visione</a>
               <a href="#servizi" className="text-slate-700 hover:text-slate-900">Servizi</a>
               <a href="#approccio" className="text-slate-700 hover:text-slate-900">Approccio</a>
               <a href="#contatti" className="text-slate-700 hover:text-slate-900">Contatti</a>
@@ -120,7 +114,7 @@ export default function LumniaLanding() {
                 <Button href="#servizi" variant="ghost">Guarda i servizi</Button>
               </div>
               <div className="mt-6 flex items-center gap-2 text-sm text-slate-500">
-                <CheckCircle2 className="h-4 w-4" /> Nessun tecnicismo inutile
+                <CheckCircle2 className="h-4 w-4" /> Nessuna conoscenza richiesta
                 <CheckCircle2 className="h-4 w-4 ml-3" /> Focus su risultati
               </div>
             </motion.div>
@@ -181,6 +175,58 @@ export default function LumniaLanding() {
           </div>
         </div>
       </Section>
+
+{/* VISIONE */}
+<section id="visione" className="py-16 md:py-24 bg-white">
+  <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <h2 className="text-center font-display text-3xl md:text-5xl tracking-tight">
+      La Nostra <span className="bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent">Visione</span>
+    </h2>
+    <p className="mt-3 text-center text-slate-600 max-w-3xl mx-auto">
+      Trasformiamo le aziende attraverso l'intelligenza artificiale, riducendo i costi operativi e potenziando le performance aziendali.
+    </p>
+
+    <div className="mt-10 grid gap-6 md:grid-cols-3">
+      {/* Riduzione Costi */}
+      <div className="group rounded-3xl border border-slate-200 bg-white/80 p-8 text-center shadow-[0_10px_30px_rgba(2,6,23,0.06)] backdrop-blur transition-transform hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(2,6,23,0.08)]">
+        <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-rose-500 to-red-500 text-white shadow-lg ring-8 ring-rose-50/70">
+          <TrendingDown className="h-10 w-10" />
+        </div>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">Riduzione Costi</h3>
+        <p className="mt-2 text-sm text-slate-600">
+          Automatizziamo i processi ripetitivi riducendo i costi operativi fino al 60%.
+        </p>
+        <p className="mt-4 font-display text-3xl text-sky-600">-60%</p>
+      </div>
+
+      {/* Potenza AI */}
+      <div className="group rounded-3xl border border-slate-200 bg-white/80 p-8 text-center shadow-[0_10px_30px_rgba(2,6,23,0.06)] backdrop-blur transition-transform hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(2,6,23,0.08)]">
+        <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-violet-500 text-white shadow-lg ring-8 ring-sky-50/70">
+          <Zap className="h-10 w-10" />
+        </div>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">Potenza AI</h3>
+        <p className="mt-2 text-sm text-slate-600">
+          L'intelligenza artificiale al centro della trasformazione digitale.
+        </p>
+        <p className="mt-4 font-display text-3xl text-violet-600">∞</p>
+      </div>
+
+      {/* Crescita Aziendale */}
+      <div className="group rounded-3xl border border-slate-200 bg-white/80 p-8 text-center shadow-[0_10px_30px_rgba(2,6,23,0.06)] backdrop-blur transition-transform hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(2,6,23,0.08)]">
+        <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-emerald-500 to-green-500 text-white shadow-lg ring-8 ring-emerald-50/70">
+          <TrendingUp className="h-10 w-10" />
+        </div>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">Crescita Aziendale</h3>
+        <p className="mt-2 text-sm text-slate-600">
+          Miglioriamo efficienza e produttività per accelerare la crescita.
+        </p>
+        <p className="mt-4 font-display text-3xl text-emerald-600">+300%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* SERVIZI */}
       <Section id="servizi" className="pt-0">
@@ -246,6 +292,8 @@ export default function LumniaLanding() {
           </div>
         </div>
       </Section>
+
+      
 
       {/* APPROCCIO */}
       <Section id="approccio" className="pt-0">
@@ -321,7 +369,7 @@ export default function LumniaLanding() {
 
           <div className="mx-auto mt-12 max-w-7xl rounded-3xl border border-slate-200 bg-white/60 p-6 text-center text-xs text-slate-500">
             <p>
-              Il modulo è fornito da Typeform. Nessun dato viene salvato da questo sito di esempio.
+              Una volta compilato il form verrete ricontattati al più presto da un nostro operatore.
             </p>
           </div>
         </div>
