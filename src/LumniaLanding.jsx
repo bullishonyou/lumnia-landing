@@ -283,11 +283,7 @@ export default function LumniaLanding() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-3xl border border-slate-200 bg-white/70 p-6 text-sm text-slate-600 backdrop-blur">
-            <p>
-              UX orientata alla conversione: tempi di caricamento rapidi, call-to-action sempre visibili e contenuti chiari. Micro‑animazioni per enfatizzare interazioni senza distrarre.
-            </p>
-          </div>
+
         </div>
       </Section>
 
