@@ -305,17 +305,18 @@ export default function LumniaLanding() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-3 shadow-[0_10px_30px_rgba(2,6,23,0.06)] backdrop-blur">
-              <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', minHeight: '560px' }}>
-                <iframe
-                  src="https://form.typeform.com/to/HXLSZsoY"
-                  title="Contattaci - Lumnia"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '16px' }}
-                  allow="camera; microphone; autoplay; encrypted-media; geolocation;"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-lg aspect-[4/5] sm:aspect-[3/4] md:aspect-[16/9] max-h-[80vh]">
+  <iframe
+    className="absolute inset-0 h-full w-full"
+    src="https://form.typeform.com/to/AQXwe9oV"
+    title="Contattaci - Lumnia"
+    frameBorder="0"
+    allow="camera; microphone; autoplay; encrypted-media;"
+    loading="lazy"
+  />
+</div>
+
+            
           </div>
 
           <div className="mx-auto mt-12 max-w-7xl rounded-3xl border border-slate-200 bg-white/60 p-6 text-center text-xs text-slate-500">
