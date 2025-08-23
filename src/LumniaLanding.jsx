@@ -80,7 +80,7 @@ export default function LumniaLanding() {
           <div className="flex h-16 items-center justify-between">
             <a href="#" className="font-display text-xl md:text-2xl font-bold tracking-tight">
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent">Lumnia</span>
+                <span className="bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent">Gruppo Automa Italia</span>
                 <span className="absolute -inset-x-1 -bottom-1 h-px bg-gradient-to-r from-sky-400/50 via-violet-500/60 to-sky-400/50" />
               </span>
             </a>
@@ -115,7 +115,7 @@ export default function LumniaLanding() {
               </div>
               <div className="mt-6 flex items-center gap-2 text-sm text-slate-500">
                 <CheckCircle2 className="h-4 w-4" /> Nessuna conoscenza richiesta
-                <CheckCircle2 className="h-4 w-4 ml-3" /> Focus su risultati
+                <CheckCircle2 className="h-4 w-4 ml-3" /> Focus sui risultati
               </div>
             </motion.div>
 
