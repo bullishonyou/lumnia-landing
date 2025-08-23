@@ -357,7 +357,7 @@ export default function LumniaLanding() {
   <iframe
     className="absolute inset-0 h-full w-full"
     src="https://form.typeform.com/to/HXLSZsoY"
-    title="Contattaci - Lumnia"
+    title="Contattaci - Gruppo Automa"
     frameBorder="0"
     allow="camera; microphone; autoplay; encrypted-media;"
     loading="lazy"
@@ -377,7 +377,7 @@ export default function LumniaLanding() {
 
       <footer className="mt-10 border-t border-slate-200/70">
         <div className="mx-auto max-w-7xl px-4 md:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-          <p>© {new Date().getFullYear()} Lumnia. Tutti i diritti riservati.</p>
+          <p>© {new Date().getFullYear()} Gruppo Automa. Tutti i diritti riservati.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-slate-900">Privacy</a>
             <a href="#" className="hover:text-slate-900">Termini</a>
